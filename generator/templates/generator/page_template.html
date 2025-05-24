@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقات الدخول</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card {
+      width: calc(100% / 6 - 10px);
+      margin: 5px;
+      border: 2px solid black;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+      text-align: center;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      color: red;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 6px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .section {
+      padding: 6px 4px;
+      border-top: 1px solid #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .section span {
+      display: inline;
+    }
+
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .credentials {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .credentials span.label {
+      color: black;
+    }
+
+    .credentials span.value {
+      color: red;
+    }
+
+    .footer {
+      padding: 6px 4px;
+      font-size: 13px;
+      color: #333;
+      border-top: 1px solid #ccc;
+    }
+
+    @media print {
+      .noprint { display: none; }
+      .pagebreak { page-break-after: always; }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        box-shadow: none;
+        margin: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    {{ cards_html|safe }}
+  </div>
+</body>
+</html>
