@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: cardmint
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn cardmint.wsgi
+    plan: free
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: cardmint.settings
+      - key: SECRET_KEY
+        value: 'django-insecure-q4lx^kv2w#a$=!86lw#nwc9vhibbb21dkoermh))5^+l-^8ed4'
+      - key: DEBUG
+        value: False
