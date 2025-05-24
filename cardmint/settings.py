@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q4lx^kv2w#a$=!86lw#nwc9vhibbb21dkoermh))5^+l-^8ed4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cardmint.onrender.com']
 
 
 # Application definition
