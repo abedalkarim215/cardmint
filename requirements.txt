@@ -7,10 +7,12 @@ django-crispy-forms==2.4
 django-cron==0.6.0
 et_xmlfile==2.0.0
 fonttools==4.58.0
+gunicorn==23.0.0
 Jinja2==3.1.6
 MarkupSafe==3.0.2
 numpy==2.2.6
 openpyxl==3.1.5
+packaging==25.0
 pandas==2.2.3
 pillow==11.2.1
 pycparser==2.22
